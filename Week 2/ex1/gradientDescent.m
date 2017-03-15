@@ -20,10 +20,6 @@ for iter = 1:num_iters
    % theta(2) = theta(2) - alpha*(1/m)*sum(X(:,2).*[X*theta - y]);
     theta = theta - alpha*(1/m)* [sum(X(:,1).*[X*theta - y]); sum(X(:,2).*[X*theta - y])];
 
-
-
-
-
     % ============================================================
 
     % Save the cost J in every iteration    

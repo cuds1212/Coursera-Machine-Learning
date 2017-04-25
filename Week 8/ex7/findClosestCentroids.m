@@ -21,11 +21,11 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
-
-
-
-
-
+for i=1:size(X,1)
+    distToCentroids = X(i,:)-centroids;
+    [M,I] = min(diag(distToCentroids*distToCentroids'),[],1);
+    idx(i) = I;
+end
 
 % =============================================================
 
